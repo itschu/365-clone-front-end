@@ -1,6 +1,6 @@
 let connected = null;
 let server = null;
-const useLocal = true;
+const useLocal = false;
 
 window.addEventListener('load', async function () {
 	// Connect to the Socket.io server
