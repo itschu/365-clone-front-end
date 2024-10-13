@@ -16,7 +16,9 @@
 
 body {
 	background-image: url(../images/bg.png);
-	/* font-family: serif; */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 640px) {
